@@ -276,6 +276,9 @@ body {
   opacity: 0.8;
 }
 
+.works {
+  background-color: #f6fbff;
+}
 .works-heading {
   color: #10375c;
   font-size: 50px;
