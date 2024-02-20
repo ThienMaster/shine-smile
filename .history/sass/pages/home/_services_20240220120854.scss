@@ -1,0 +1,9 @@
+@use "../../abstracts" as abst;
+
+.services {
+  margin: 170px 0;
+
+  &-heading {
+    color: abst.$bg-primary;
+  }
+}

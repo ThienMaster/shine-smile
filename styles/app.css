@@ -1,0 +1,217 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  color: #575f66;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.heading {
+  color: #fff;
+  font-weight: 600;
+}
+
+.caption {
+  color: #575f66;
+  font-weight: 300;
+}
+
+.button {
+  all: unset;
+  color: #fff;
+  border-radius: 22px;
+  background-color: #2e80ce;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.header {
+  background-color: #10375c;
+  padding-block: 30px 110px;
+}
+.header-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+.header-menu-item {
+  position: relative;
+}
+.header-menu-item:first-child::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 100rem;
+  background-color: #fff;
+  position: absolute;
+  left: -12px;
+  bottom: 10px;
+}
+.header-menu-item:first-child .header-menu-link {
+  text-shadow: 1px 0 0 currentColor;
+  color: #fff;
+}
+.header-menu-link {
+  color: #c9d2da;
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 300;
+  transition: all 0.2s linear;
+}
+.header-menu-link:hover {
+  text-shadow: 1px 0 0 currentColor;
+  color: #fff;
+}
+.header-btn {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.header-btn .button {
+  font-size: 16px;
+  line-height: 1.75;
+  padding: 8px 20px;
+  transition: all 0.2s linear;
+}
+.header-btn .button-login {
+  color: #c9d2da;
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 300;
+  transition: all 0.2s linear;
+}
+.header-btn .button-login:hover {
+  text-shadow: 1px 0 0 currentColor;
+  color: #fff;
+}
+.header-btn .button-signup:hover {
+  opacity: 0.8;
+}
+
+.hero {
+  margin-top: 76px;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-content {
+  width: 44%;
+}
+.hero-heading {
+  font-size: 70px;
+  line-height: 1.1428571429;
+  letter-spacing: -1.4px;
+}
+.hero-caption {
+  margin-block: 22px 38px;
+  color: #c9d2da;
+  font-size: 18px;
+  line-height: 1.6666666667;
+}
+.hero-button {
+  display: inline-block;
+  padding: 15px 46px;
+  font-size: 18px;
+  line-height: 1.6666666667;
+  margin-right: 38px;
+  transition: all 0.2s linear;
+}
+.hero-button:hover {
+  opacity: 0.8;
+}
+.hero span {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6666666667;
+}
+
+.services {
+  margin: 170px 0;
+}
+.services-heading {
+  color: #10375c;
+  text-align: center;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
+}
+.services-caption {
+  font-size: 18px;
+  line-height: 1.6666666667;
+  text-align: center;
+  max-width: 468px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=app.css.map */

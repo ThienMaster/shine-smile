@@ -1,0 +1,12 @@
+header.header
+  nav.header-nav
+    .container.header-nav-container
+      a.logo(href="/")
+        img(src="../../image/Logo.svg", alt="Logo Shine Smile")
+      ul.header-menu
+        each menu in [{href: "/", title: "Home"}, {href: "#!", title: "Services"}, {href: "#!", title: "About"}, {href: "#!", title: "Doctors"}]
+          li.header-menu-item
+            a.header-menu-link(href= menu.href)= menu.title
+      .header-btn
+        a.btn-login(href="#!") Log In
+        a.button.btn-signup(href="#!") Sign Up

@@ -1,0 +1,119 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-color: abst.$bg-primary;
+  padding-top: 30px;
+
+  &-nav-container {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-menu {
+    // margin-inline: auto 222px;
+    @include abst.flexBox(((align-items: center, gap: 42px)));
+
+    &-item {
+      position: relative;
+
+      &:first-child::before {
+        content: "";
+        @include abst.size(6px);
+        border-radius: 100rem;
+        background-color: #fff;
+        position: absolute;
+        left: -12px;
+        bottom: 10px;
+      }
+
+      &:first-child .header-menu-link {
+        text-shadow: 1px 0 0 currentColor;
+        color: #fff;
+      }
+    }
+
+    &-link {
+      color: abst.$gray-c9;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      @include abst.fontWeight("light");
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+        color: #fff;
+      }
+    }
+  }
+
+  &-btn {
+    @include abst.flexBox(((align-items: center, gap: 28px)));
+
+    .button {
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      padding: 8px 20px;
+      transition: all 0.2s linear;
+    }
+
+    .button-login {
+      color: abst.$gray-c9;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      @include abst.fontWeight("light");
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+        color: #fff;
+      }
+    }
+
+    .button-signup:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.hero {
+  margin-top: 76px;
+
+  &-container {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-content {
+    max-width: 517px;
+    width: 100%;
+  }
+
+  &-heading {
+    font-size: 70px;
+    line-height: calc(80 / 70);
+    letter-spacing: -2px;
+  }
+
+  &-caption {
+    max-width: 468px;
+    margin-block: 22px 38px;
+    color: abst.$gray-c9;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+  }
+
+  &-button {
+    padding: 15px 46px;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    margin-right: 38px;
+  }
+
+  span {
+    color: #fff;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+  }
+}

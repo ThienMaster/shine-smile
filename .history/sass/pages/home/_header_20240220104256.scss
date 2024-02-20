@@ -1,0 +1,17 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-color: abst.$bg-primary;
+
+  &-nav-container {
+    padding-top: 30px;
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-menu {
+    margin-inline: auto 177px;
+    @include abst.flexBox(((align-items: center, gap: 42px)));
+  }
+}

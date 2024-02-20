@@ -1,0 +1,71 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-color: abst.$bg-primary;
+
+  &-nav-container {
+    padding-top: 30px;
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-menu {
+    // margin-inline: auto 222px;
+    @include abst.flexBox(((align-items: center, gap: 42px)));
+
+    &-item {
+      position: relative;
+      &:first-child::before {
+        content: "";
+        @include abst.size(6px);
+        border-radius: 100rem;
+        background-color: #fff;
+        position: absolute;
+        top: -8px;
+        right: 8px;
+      }
+    }
+
+    &-link {
+      color: abst.$gray-c9;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      @include abst.fontWeight("light");
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+        color: #fff;
+      }
+    }
+  }
+
+  &-btn {
+    @include abst.flexBox(((align-items: center, gap: 28px)));
+
+    .button {
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      padding: 8px 20px;
+      transition: all 0.2s linear;
+    }
+
+    .button-login {
+      color: abst.$gray-c9;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      @include abst.fontWeight("light");
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+        color: #fff;
+      }
+    }
+
+    .button-signup:hover {
+      opacity: 0.9;
+    }
+  }
+}
