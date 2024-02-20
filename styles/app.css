@@ -136,9 +136,11 @@ body {
   gap: 28px;
 }
 .header-btn .button {
+  display: inline-block;
   font-size: 16px;
   line-height: 1.75;
   padding: 8px 20px;
+  border-radius: 22px;
   transition: all 0.2s linear;
 }
 .header-btn .button-login {
@@ -183,6 +185,7 @@ body {
   padding: 15px 46px;
   font-size: 18px;
   line-height: 1.6666666667;
+  border-radius: 30px;
   margin-right: 38px;
   transition: all 0.2s linear;
 }
@@ -204,14 +207,73 @@ body {
   font-size: 50px;
   line-height: 1.2;
   letter-spacing: -1px;
-  margin-bottom: 18px;
 }
 .services-caption {
   font-size: 18px;
   line-height: 1.6666666667;
   text-align: center;
   max-width: 468px;
-  margin: 0 auto;
+  margin: 18px auto 70px;
+}
+.services-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.services-item {
+  display: flex;
+  gap: 19px;
+  width: 470px;
+  padding: 21px;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+.services-item:hover {
+  position: relative;
+  box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+.services-item:hover .services-item-icon {
+  color: #fff;
+  background-color: #2e80ce;
+}
+.services-item-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 100rem;
+  background-color: #eff6fd;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s linear;
+  color: black;
+}
+.services-item-body {
+  flex: 1;
+}
+.services-item-heading {
+  color: #10375c;
+  font-size: 18px;
+  line-height: 1.26;
+  margin-bottom: 8px;
+}
+.services-item-desc {
+  max-width: 308px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.services .button {
+  display: inline-block;
+  padding: 15px 48px;
+  font-size: 18px;
+  line-height: 1.6666666667;
+  margin-top: 55px;
+  border-radius: 30px;
+  transition: all 0.2s linear;
+}
+.services .button:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=app.css.map */

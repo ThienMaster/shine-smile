@@ -26,9 +26,10 @@
   }
 
   &-item {
-    @include abst.flexBox(((gap: 19px)));
+    @include abst.flexBox(((align-items: center, gap: 19px)));
     width: 470px;
     padding: 21px;
+    background-color: #fff;
     border-radius: 10px;
     transition: all 0.2s linear;
 
@@ -61,7 +62,6 @@
       color: abst.$bg-primary;
       font-size: 18px;
       line-height: calc(22.68 / 18);
-      margin-bottom: 8px;
     }
 
     &-desc {
@@ -78,10 +78,5 @@
     line-height: calc(30 / 18);
     margin-top: 55px;
     border-radius: 30px;
-    transition: all 0.2s linear;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }

@@ -26,7 +26,7 @@
   }
 
   &-item {
-    @include abst.flexBox(((gap: 19px)));
+    @include abst.flexBox(((align-items: center, gap: 19px)));
     width: 470px;
     padding: 21px;
     border-radius: 10px;
