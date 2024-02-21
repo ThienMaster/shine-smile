@@ -292,5 +292,38 @@ body {
   max-width: 468px;
   margin-block: 18px 70px;
 }
+.works-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 30px;
+}
+.works-item {
+  padding: 43px;
+  border-radius: 4px;
+  border: 16px solid #eaf6ff;
+  background-color: #fff;
+  transition: all 0.2s linear;
+}
+.works-item:hover {
+  border-color: #2e80ce;
+  transform: translateY(-16px);
+  cursor: pointer;
+}
+.works-item-heading {
+  color: #10375c;
+  font-size: 26px;
+  line-height: 1.3846153846;
+  margin-block: 18px 28px;
+}
+.works-item-caption {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.works-item-more {
+  color: #2e80ce;
+  font-size: 16px;
+  line-height: 1.75;
+}
 
 /*# sourceMappingURL=app.css.map */
