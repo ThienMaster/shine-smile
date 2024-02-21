@@ -1,0 +1,17 @@
+@use "../../abstracts" as abst;
+
+.cta {
+  &-wrapper {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+    position: relative;
+    background-color: abst.$blue-2e;
+  }
+
+  &-media {
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+  }
+}

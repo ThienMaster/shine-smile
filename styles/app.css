@@ -382,7 +382,6 @@ body {
 
 .team {
   padding-top: 60px;
-  margin-bottom: 170px;
 }
 .team-heading {
   color: #10375c;
@@ -465,6 +464,47 @@ body {
 }
 .team-controls-icon-next {
   rotate: 180deg;
+}
+
+.cta {
+  margin: 265px 0 170px;
+}
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: #2e80ce;
+  padding: 0 70px;
+  height: 427px;
+  border-radius: 4px;
+}
+.cta-media img {
+  position: absolute;
+  bottom: 0;
+}
+.cta-content {
+  max-width: 586px;
+  width: 100%;
+}
+.cta-heading {
+  color: #fff;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  max-width: 489px;
+}
+.cta-caption {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6666666667;
+  margin-block: 18px 38px;
+}
+.cta-image {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=app.css.map */
