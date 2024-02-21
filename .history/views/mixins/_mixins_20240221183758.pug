@@ -17,9 +17,9 @@ mixin worksItem(image, alt, heading)
     a.works-item-more(href="#!") Learn More
 
 //- /*---------- Mixin Team Item ----------*/
-mixin teamItem(image, alt)
+mixin teamItem(image, alt, name)
   li.team-item
     .team-item-image
       img.team-item-thumb(src= image, alt= alt)
-    h3.team-item-name Dr. Essence Page
+    h3.team-item-name= name
     p.team-item-desc DDS, California - Linda University

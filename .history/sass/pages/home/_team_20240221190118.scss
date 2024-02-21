@@ -1,0 +1,92 @@
+@use "../../abstracts" as abst;
+
+.team {
+  padding-top: 60px;
+
+  &-heading {
+    color: abst.$bg-primary;
+    font-size: 50px;
+    line-height: calc(60 / 50);
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  &-button {
+    display: block;
+    padding: 15px 26px;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    border-radius: 30px;
+    margin: 38px auto 70px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 30px;
+  }
+
+  &-item {
+    &-image {
+      background-color: #eaf6ff;
+      border-radius: 6px;
+      padding-top: 28px;
+      overflow: hidden;
+
+      &:hover .team-item-thumb {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+
+    &-thumb {
+      height: 290px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    &-name {
+      color: abst.$bg-primary;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    &-desc {
+      @include abst.fontWeight("light");
+      font-size: 14px;
+      line-height: calc(26 / 14);
+      text-align: center;
+    }
+  }
+
+  &-controls {
+    margin-top: 38px;
+    @include abst.flexBox(
+      ((align-items: center, justify-content: center, gap: 18px))
+    );
+
+    &-btn {
+      @include abst.size(36px);
+      border: 1px solid abst.$gray-575;
+      border-radius: 100rem;
+      @include abst.flexBox(((align-items: center, justify-content: center)));
+      transition: all 0.2s linear;
+
+      &:hover {
+        border-color: abst.$blue-2e;
+        background-color: abst.$blue-2e;
+        color: #fff;
+      }
+    }
+
+    &-icon {
+      // color: abst.$gray-575;
+
+      &-next {
+        rotate: 180deg;
+      }
+    }
+  }
+}

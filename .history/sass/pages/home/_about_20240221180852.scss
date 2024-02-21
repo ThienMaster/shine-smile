@@ -1,8 +1,7 @@
 @use "../../abstracts" as abst;
 
 .about {
-  margin-top: 85px;
-  padding: 85px 0 200px;
+  margin-block: 170px 260px;
 
   &-wrapper {
     @include abst.flexBox(

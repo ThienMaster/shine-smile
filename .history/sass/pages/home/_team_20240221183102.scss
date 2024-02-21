@@ -1,0 +1,50 @@
+@use "../../abstracts" as abst;
+
+.team {
+  padding-top: 60px;
+
+  &-heading {
+    color: abst.$bg-primary;
+    font-size: 50px;
+    line-height: calc(60 / 50);
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  &-button {
+    display: block;
+    padding: 15px 26px;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    border-radius: 30px;
+    margin: 38px auto 70px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 30px;
+  }
+
+  &-item {
+    &-image {
+      background-color: #eaf6ff;
+      border-radius: 6px;
+      padding-top: 28px;
+      overflow: hidden;
+
+      &:hover .team-item-thumb {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+
+    &-thumb {
+      display: block;
+      height: 290px;
+      max-width: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+  }
+}

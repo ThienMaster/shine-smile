@@ -1,0 +1,16 @@
+-
+  var team_list = [
+    {image: "./image/team/dentist-1.svg", alt: "Dr. Essence Page"},
+    {image: "./image/team/dentist-2.svg", alt: "Dr. Essence Page"},
+    {image: "./image/team/dentist-3.svg", alt: "Dr. Essence Page"},
+    {image: "./image/team/dentist-4.svg", alt: "Dr. Essence Page"}
+  ];
+
+section.team
+  .container
+    h2.heading.team-heading Our virtual dentist
+    a.button.team-button(href="#!") Meet our dentist
+    ul.team-list
+      each team_item in team_list
+        +teamItem(team_item.image, team_item.alt)
+      .team-controls

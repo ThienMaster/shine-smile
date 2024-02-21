@@ -1,0 +1,22 @@
+-
+  var team_list = [
+    {image: "./image/team/dentist-1.svg", alt: "Dr. Essence Page"},
+    {image: "./image/team/dentist-2.svg", alt: "Dr. Essence Page"},
+    {image: "./image/team/dentist-3.svg", alt: "Dr. Essence Page"},
+    {image: "./image/team/dentist-4.svg", alt: "Dr. Essence Page"}
+  ];
+
+section.team
+  .container
+    h2.heading.team-heading Our virtual dentist
+    a.button.team-button(href="#!") Meet our dentist
+    ul.team-list
+      each team_item in team_list
+        +teamItem(team_item.image, team_item.alt)
+    .team-controls
+      button.team-controls-btn
+        svg.team-controls-icon(width="6", height="12", viewBox="0 0 6 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+          path(d="M5.5 1L0.5 6L5.5 11", stroke="currentColor", stroke-linecap="round", stroke-linejoin="round")
+      button.team-controls-btn
+        svg.team-controls-icon.team-controls-icon-next(width="6", height="12", viewBox="0 0 6 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+          path(d="M5.5 1L0.5 6L5.5 11", stroke="currentColor", stroke-linecap="round", stroke-linejoin="round")

@@ -327,7 +327,8 @@ body {
 }
 
 .about {
-  margin: 170px 0;
+  margin-top: 85px;
+  padding: 85px 0 200px;
 }
 .about-wrapper {
   display: flex;
@@ -377,6 +378,93 @@ body {
 }
 .about-button:hover {
   opacity: 0.8;
+}
+
+.team {
+  padding-top: 60px;
+  margin-bottom: 170px;
+}
+.team-heading {
+  color: #10375c;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  text-align: center;
+}
+.team-button {
+  display: block;
+  padding: 15px 26px;
+  font-size: 18px;
+  line-height: 1.6666666667;
+  border-radius: 30px;
+  margin: 38px auto 70px;
+  transition: all 0.2s linear;
+}
+.team-button:hover {
+  opacity: 0.8;
+}
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 30px;
+}
+.team-item-image {
+  background-color: #eaf6ff;
+  border-radius: 6px;
+  padding-top: 28px;
+  overflow: hidden;
+}
+.team-item-image:hover .team-item-thumb {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.team-item-thumb {
+  height: 290px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.team-item-name {
+  color: #10375c;
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: center;
+  margin-top: 12px;
+}
+.team-item-desc {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.8571428571;
+  text-align: center;
+}
+.team-controls {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.team-controls-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #575f66;
+  border-radius: 100rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s linear;
+}
+.team-controls-btn:hover {
+  border-color: #2e80ce;
+  background-color: #2e80ce;
+}
+.team-controls-btn:hover .team-controls-icon {
+  color: #fff;
+}
+.team-controls-icon {
+  color: #575f66;
+}
+.team-controls-icon-next {
+  rotate: 180deg;
 }
 
 /*# sourceMappingURL=app.css.map */
