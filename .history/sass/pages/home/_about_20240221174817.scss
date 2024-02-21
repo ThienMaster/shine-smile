@@ -12,6 +12,7 @@
   &-image {
     width: 49%;
     position: relative;
+    cursor: pointer;
 
     &-big {
       @include abst.size(512px, 370px);
