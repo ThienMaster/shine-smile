@@ -1,0 +1,30 @@
+@use "../../abstracts" as abst;
+
+.about {
+  margin: 170px 0;
+
+  &-wrapper {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-heading {
+    color: abst.$bg-primary;
+    font-size: 50px;
+    line-height: calc(60 / 50);
+    letter-spacing: -1px;
+  }
+
+  &-caption {
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    margin-block: 18px 38px;
+  }
+
+  &-button {
+    padding: 15px 51px;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+  }
+}

@@ -326,4 +326,53 @@ body {
   line-height: 1.75;
 }
 
+.about {
+  margin: 170px 0;
+}
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-image {
+  width: 49%;
+  position: relative;
+}
+.about-image-big {
+  width: 512px;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.about-image-small {
+  width: 332px;
+  height: 370px;
+  object-fit: cover;
+  position: absolute;
+  top: 121px;
+  left: 238px;
+}
+.about-content {
+  width: 40%;
+  margin-top: 83px;
+}
+.about-heading {
+  color: #10375c;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+.about-caption {
+  font-size: 18px;
+  line-height: 1.6666666667;
+  margin-block: 18px 38px;
+}
+.about-button {
+  display: inline-block;
+  padding: 15px 51px;
+  font-size: 18px;
+  line-height: 1.6666666667;
+  border-radius: 30px;
+}
+
 /*# sourceMappingURL=app.css.map */
