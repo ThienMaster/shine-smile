@@ -607,4 +607,50 @@ body {
   color: #2e80ce;
 }
 
+.appointment {
+  margin: 170px 0;
+}
+.appointment-content {
+  background-color: #f6fbff;
+  padding: 100px 0;
+}
+.appointment-heading {
+  color: #10375c;
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 18px;
+}
+.appointment-heading:after {
+  content: "";
+  width: 136px;
+  height: 2px;
+  background-color: #2e80ce;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.appointment-caption {
+  max-width: 617px;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 18px auto 38px;
+  text-align: center;
+}
+.appointment-button {
+  display: block;
+  padding: 15px 40px;
+  font-size: 18px;
+  line-height: 1.6666666667;
+  border-radius: 30px;
+  transition: all 0.2s linear;
+  margin: 0 auto;
+}
+.appointment-button:hover {
+  opacity: 0.8;
+}
+
 /*# sourceMappingURL=app.css.map */
