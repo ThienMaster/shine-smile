@@ -653,4 +653,109 @@ body {
   opacity: 0.8;
 }
 
+.footer {
+  background-color: #10375c;
+  padding-top: 100px;
+  font-family: "Open Sans", sans-serif;
+  color: #a9b3bb;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+.footer-caption {
+  margin-top: 21px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.footer-heading {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.footer-link {
+  display: inline-block;
+  color: #a9b3bb;
+  font-size: 14px;
+  line-height: 1.8571428571;
+  transition: all 0.2s linear;
+}
+.footer-link:hover {
+  text-decoration: underline solid #a9b3bb;
+}
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.footer-socials-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 100rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2e80ce;
+  transition: all 0.2s linear;
+}
+.footer-socials-btn:hover {
+  color: #fff;
+  background-color: #2e80ce;
+}
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.8571428571;
+  max-width: 273px;
+  margin-bottom: 10px;
+}
+.footer-bottom {
+  border-top: 1px solid #406181;
+}
+.footer-bottom p {
+  padding: 28px 0 42px;
+  color: #aab3ba;
+  font-size: 14px;
+  line-height: 1.8571428571;
+  text-align: center;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  height: 46px;
+}
+.subscribe-input {
+  color: #fff;
+  border: 1px solid #406181;
+  border-radius: 4px;
+  padding: 10px;
+  flex: 1;
+}
+.subscribe-input::placeholder {
+  color: #a9b3bb;
+}
+.subscribe-button {
+  display: inline-block;
+  padding: 10px 21px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.8571428571;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+}
+.subscribe-button:hover {
+  opacity: 0.8;
+}
+
 /*# sourceMappingURL=app.css.map */

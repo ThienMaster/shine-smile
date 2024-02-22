@@ -1,0 +1,93 @@
+@use "../../abstracts" as abst;
+
+.footer {
+  background-color: abst.$bg-primary;
+  padding-top: 100px;
+  font-family: abst.$font-third;
+  color: abst.$gray-a9;
+
+  &-top {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    column-gap: 78px;
+  }
+
+  &-caption {
+    margin-top: 21px;
+    font-size: 16px;
+    line-height: calc(28 / 16);
+  }
+
+  &-heading {
+    color: #fff;
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    margin-bottom: 20px;
+  }
+
+  &-links {
+    @include abst.flexBox(((flex-direction: column, gap: 10px)));
+    margin-bottom: 28px;
+  }
+
+  &-link {
+    display: inline-block;
+    color: abst.$gray-a9;
+    font-size: 14px;
+    line-height: calc(26 / 14);
+    transition: all 0.2s linear;
+
+    &:hover {
+      text-decoration: underline solid abst.$gray-a9;
+    }
+  }
+
+  &-socials {
+    @include abst.flexBox(((align-items: center, gap: 10px)));
+    margin-bottom: 28px;
+
+    &-btn {
+      @include abst.size(32px);
+      border-radius: 100rem;
+      background-color: #fff;
+      @include abst.flexBox(((align-items: center, justify-content: center)));
+      color: abst.$blue-2e;
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: #fff;
+        background-color: abst.$blue-2e;
+      }
+    }
+  }
+
+  &-desc {
+    font-size: 14px;
+    line-height: calc(26 / 14);
+    margin-bottom: 10px;
+  }
+}
+
+.subscribe {
+  &-form {
+    @include abst.flexBox(((gap: 12px)));
+    @include abst.size(100%, 46px);
+  }
+
+  &-input {
+    color: #9ca8b1;
+    // background-color: #406181;
+    border: 1px solid #9ca8b1;
+    border-radius: 4px;
+    padding: 10px;
+  }
+
+  &-button {
+    display: inline-block;
+    padding: 10px 21px;
+    @include abst.fontWeight("semibold");
+    font-size: 14px;
+    line-height: calc(26 / 14);
+    border-radius: 4px;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../abstracts" as abst;
+
+.footer {
+  background-color: abst.$bg-primary;
+  padding-top: 100px;
+
+  &-top {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    column-gap: 78px;
+  }
+}

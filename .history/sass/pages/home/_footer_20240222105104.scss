@@ -1,0 +1,5 @@
+@use "../../abstracts" as abst;
+
+.footer {
+  background-color: abst.$bg-primary;
+}
