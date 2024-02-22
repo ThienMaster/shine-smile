@@ -1,0 +1,21 @@
+section.blog
+  .container
+    .blog-inner
+      .blog-content
+        h2.heading.blog-heading Read Latest News & Events.
+        a.blog-more(href="#!") Read All Blog
+        .blog-controls
+          button.blog-controls-btn
+            svg.blog-controls-icon(width="6", height="12", viewBox="0 0 6 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+              path(d="M5.5 1L0.5 6L5.5 11", stroke="currentColor", stroke-linecap="round", stroke-linejoin="round")
+          button.blog-controls-btn
+            svg.blog-controls-icon.blog-controls-icon-next(width="6", height="12", viewBox="0 0 6 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+              path(d="M5.5 1L0.5 6L5.5 11", stroke="currentColor", stroke-linecap="round", stroke-linejoin="round")
+      ul.blog-list
+        each val in [1,2]
+          li.blog-item
+            img.blog-item-image(src="../../image/blog/blog-1.svg", alt="")
+            .blog-item-content
+              h3.heading.blog-item-heading Key Considerations for Regulatory Compliant.
+              p.caption.blog-item-caption It’s easy to think about medical care from a narrow perspective. You go to the hospital.
+              a.blog-item-more(href="#!") Learn More

@@ -1,0 +1,51 @@
+@use "../../abstracts" as abst;
+
+.blog {
+  &-inner {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-content {
+    width: 40%;
+  }
+
+  &-heading {
+    // max-width: 470px;
+    color: abst.$bg-primary;
+    font-size: 50px;
+    line-height: calc(60 / 50);
+    letter-spacing: -1px;
+  }
+
+  &-more {
+    display: inline-block;
+    color: abst.$bg-primary;
+    @include abst.fontWeight("semibold");
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    margin: 28px 0;
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+  }
+
+  &-controls {
+    @include abst.flexBox(((align-items: center, gap: 18px)));
+
+    &-btn {
+      @include abst.size(36px);
+      border-radius: 100rem;
+      border: 1px solid abst.$gray-575;
+      @include abst.flexBox(((align-items: center, justify-content: center)));
+    }
+
+    &-icon {
+      color: abst.$gray-575;
+
+      &-next {
+        rotate: 180deg;
+      }
+    }
+  }
+}

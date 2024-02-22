@@ -1,0 +1,120 @@
+@use "../../abstracts" as abst;
+
+.blog {
+  &-inner {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-content {
+    width: 40%;
+  }
+
+  &-heading {
+    // max-width: 470px;
+    color: abst.$bg-primary;
+    font-size: 50px;
+    line-height: calc(60 / 50);
+    letter-spacing: -1px;
+  }
+
+  &-more {
+    display: inline-block;
+    font-family: abst.$font-secondary;
+    color: abst.$bg-primary;
+    @include abst.fontWeight("semibold");
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    margin: 28px 0;
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+  }
+
+  &-controls {
+    @include abst.flexBox(((align-items: center, gap: 18px)));
+
+    &-btn {
+      @include abst.size(36px);
+      border-radius: 100rem;
+      border: 1px solid abst.$gray-575;
+      @include abst.flexBox(((align-items: center, justify-content: center)));
+      transition: all 0.2s linear;
+      color: abst.$gray-575;
+
+      &:hover {
+        border-color: abst.$blue-2e;
+        background-color: abst.$blue-2e;
+        color: #fff;
+      }
+    }
+
+    &-icon-next {
+      rotate: 180deg;
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+  }
+
+  &-item {
+    max-width: 270px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #e8ebee;
+    overflow: hidden;
+    transition: all 0.2s linear;
+
+    &:hover {
+      box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
+      border-color: transparent;
+    }
+
+    &-image {
+      // height: 172px;
+      // overflow: hidden;
+
+      img {
+        @include abst.size(270px, 172px);
+        object-fit: cover;
+        transition: 0.5s;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+
+    &-content {
+      padding: 18px 0 21px 22px;
+    }
+
+    &-heading {
+      color: abst.$bg-primary;
+      font-size: 16px;
+      line-height: calc(26 / 16);
+    }
+
+    &-caption {
+      font-size: 14px;
+      line-height: calc(24 / 14);
+      margin-block: 10px 12px;
+    }
+
+    &-more {
+      display: inline-block;
+      color: abst.$bg-primary;
+      font-size: 14px;
+      line-height: calc(17.64 / 14);
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: abst.$blue-2e;
+      }
+    }
+  }
+}

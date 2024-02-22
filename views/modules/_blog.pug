@@ -1,0 +1,22 @@
+-
+  var blog_list = [
+    {image: "../../image/blog/blog-1.svg", alt: "Key Considerations for Regulatory Compliant", heading: "Key Considerations for Regulatory Compliant."},
+    {image: "../../image/blog/blog-2.svg", alt: "What Is Population Health Management?", heading: "What Is Population Health Management?"},
+  ];
+
+section.blog
+  .container
+    .blog-inner
+      .blog-content
+        h2.heading.blog-heading Read Latest News & Events.
+        a.blog-more(href="#!") Read All Blog
+        .blog-controls
+          button.blog-controls-btn
+            svg.blog-controls-icon(width="6", height="12", viewBox="0 0 6 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+              path(d="M5.5 1L0.5 6L5.5 11", stroke="currentColor", stroke-linecap="round", stroke-linejoin="round")
+          button.blog-controls-btn
+            svg.blog-controls-icon.blog-controls-icon-next(width="6", height="12", viewBox="0 0 6 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+              path(d="M5.5 1L0.5 6L5.5 11", stroke="currentColor", stroke-linecap="round", stroke-linejoin="round")
+      ul.blog-list
+        each blog_item in blog_list
+          +blogItem(blog_item.image, blog_item.alt, blog_item.heading)

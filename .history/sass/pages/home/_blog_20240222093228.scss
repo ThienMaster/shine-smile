@@ -1,0 +1,9 @@
+@use "../../abstracts" as abst;
+
+.blog {
+  &-inner {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+}
