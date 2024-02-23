@@ -1,0 +1,57 @@
+@use "../../abstracts" as abst;
+
+.cta {
+  margin: 265px 0 170px;
+  &-wrapper {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+    position: relative;
+    background-color: abst.$blue-2e;
+    padding: 0 70px;
+    height: 427px;
+    border-radius: 4px;
+    container-type: inline-size;
+    container-name: cta-wrapper;
+  }
+
+  &-media img {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &-content {
+    max-width: 586px;
+    width: 100%;
+  }
+
+  @container cta-wrapper (max-width: 970px) {
+    &-media img {
+      display: none;
+    }
+
+    &-content {
+      width: 90%;
+    }
+  }
+
+  &-heading {
+    color: #fff;
+    font-size: 50px;
+    line-height: calc(60 / 50);
+    letter-spacing: -1px;
+    max-width: 489px;
+  }
+
+  &-caption {
+    color: #fff;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    margin-block: 18px 38px;
+  }
+
+  &-image {
+    @include abst.flexBox(((align-items: center, gap: 28px)));
+    cursor: pointer;
+  }
+}

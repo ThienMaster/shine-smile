@@ -1,0 +1,18 @@
+-
+  var services_list = [
+    {heading: "Oral Surgery"},
+    {heading: "Wisdom Teeth Removal"},
+    {heading: "Preventative Dentistry"}
+  ];
+
+section.services
+  .container.services-container
+    h2.heading.services-heading Our services
+    p.caption.services-caption Exceptional dental care for all ages. Your great smile begins with a great dentist.
+    .services-content
+      .services-image
+        img(src="./image/services.svg", alt="services_img")
+      ul.services-list
+        each services_item in services_list
+          +servicesItem(services_item.heading)
+        a.button(href="#!") All Services

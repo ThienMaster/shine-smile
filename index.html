@@ -30,9 +30,9 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <nav class="header-nav">
-          <div class="container header-nav-container"><a class="logo" href="/"><img src="./image/Logo.svg" alt="Logo Shine Smile"></a>
-            <ul class="header-menu">
+        <div class="container header-container">
+          <div class="header-top"><a class="logo header-logo" href="/"><img src="./image/Logo.svg" alt="Logo Shine Smile"></a>
+            <ul class="header-menu" id="header-menu-pc">
               <li class="header-menu-item"><a class="header-menu-link" href="/">Home</a></li>
               <li class="header-menu-item"><a class="header-menu-link" href="#!">Services</a></li>
               <li class="header-menu-item"><a class="header-menu-link" href="#!">About</a></li>
@@ -40,9 +40,7 @@
             </ul>
             <div class="header-btn"><a class="button-login" href="#!">Log In</a><a class="button button-signup" href="#!">Sign Up</a></div>
           </div>
-        </nav>
-        <div class="hero">
-          <div class="container hero-container">
+          <div class="hero">
             <div class="hero-content">
               <h1 class="heading hero-heading">Exceptional dental care for all ages.</h1>
               <p class="caption hero-caption">Exceptional dental care for all ages. Your great smile begins with a great dentist.</p>
@@ -52,9 +50,36 @@
           </div>
         </div>
       </header>
+      <div class="menu">
+        <div class="menu-mobile">
+          <input class="menu-checkbox" type="checkbox" name="menu-checkbox" id="menu-checkbox" hidden>
+          <label for="menu-checkbox">
+            <svg class="menu-header-icon" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+              <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" fill="currentColor"></path>
+            </svg>
+          </label>
+          <label class="menu-overlay" for="menu-checkbox"></label>
+          <div class="menu-drawer">
+            <div class="menu-drawer-top"><a class="logo" href="/"><img src="./image/Logo.svg" alt="Logo Shine Smile"></a>
+              <label for="menu-checkbox">
+                <svg class="close-menu" xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 384 512">
+                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" fill="currentColor"></path>
+                </svg>
+              </label>
+            </div>
+            <ul id="header-menu-mobile"></ul>
+            <script>
+              const navPC = document.querySelector("#header-menu-pc");
+              const navMobile = document.querySelector("#header-menu-mobile");
+              // Sao chép
+              navMobile.innerHTML = navPC.innerHTML;
+            </script>
+          </div>
+        </div>
+      </div>
       <main>
         <section class="services">
-          <div class="container">
+          <div class="container services-container">
             <h2 class="heading services-heading">Our services</h2>
             <p class="caption services-caption">Exceptional dental care for all ages. Your great smile begins with a great dentist.</p>
             <div class="services-content">
@@ -92,13 +117,13 @@
                     <h2 class="heading services-item-heading">Preventative Dentistry</h2>
                     <p class="caption services-item-desc">Everything you expect and then some. Cleanings, fillings, and x-rays.</p>
                   </div>
-                </li><a class="button" href="#!">All Services</a>
+                </li><a class="button services-button" href="#!">All Services</a>
               </ul>
             </div>
           </div>
         </section>
         <section class="works">
-          <div class="container">
+          <div class="container works-container">
             <h2 class="heading works-heading">How it works</h2>
             <p class="caption works-caption">Exceptional dental care for all ages. Your great smile begins with a great dentist.</p>
             <ul class="works-list">
@@ -118,7 +143,7 @@
           </div>
         </section>
         <section class="about">
-          <div class="container">
+          <div class="container about-container">
             <div class="about-wrapper">
               <div class="about-image"><img class="about-image-big" src="./image/about/about.svg" alt="about-image-big"><img class="about-image-small" src="./image/about/about-1.svg" alt="about-image-small"></div>
               <div class="about-content">
@@ -129,7 +154,7 @@
           </div>
         </section>
         <section class="team">
-          <div class="container">
+          <div class="container team-container">
             <h2 class="heading team-heading">Our virtual dentist</h2><a class="button team-button" href="#!">Meet our dentist</a>
             <ul class="team-list">
               <li class="team-item">
@@ -180,7 +205,7 @@
           </div>
         </section>
         <section class="blog">
-          <div class="container">
+          <div class="container blog-container">
             <div class="blog-inner">
               <div class="blog-content">
                 <h2 class="heading blog-heading">Read Latest News & Events.</h2><a class="blog-more" href="#!">Read All Blog</a>

@@ -1,0 +1,31 @@
+header.header
+  .container
+    .header-top
+      a.logo.header-logo(href="/")
+        img(src="./image/Logo.svg", alt="Logo Shine Smile")
+      ul.header-menu
+        each menu in [{href: "/", title: "Home"}, {href: "#!", title: "Services"}, {href: "#!", title: "About"}, {href: "#!", title: "Doctors"}]
+          li.header-menu-item
+            a.header-menu-link(href= menu.href)= menu.title
+      .header-btn
+        a.button-login(href="#!") Log In
+        a.button.button-signup(href="#!") Sign Up
+
+    .hero
+      .container.hero-container
+        .hero-content
+          h1.heading.hero-heading Exceptional dental care for all ages.
+          p.caption.hero-caption Exceptional dental care for all ages. Your great smile begins with a great dentist.
+          .hero-links
+            a.button.hero-button(href="#!") Book Online
+            a(href="#!")
+              span or call (123) 456-7890
+        .hero-image
+          img(src="./image/Images.svg", alt="Image Hero")
+
+.header-mobile
+  input.menu-checkbox(type="checkbox", name="menu-checkbox" id="menu-checkbox" hidden)
+  label(for="menu-checkbox")
+    svg.header-mobile-icon(xmlns="http://www.w3.org/2000/svg", height="16", width= "14", viewBox="0 0 448 512")
+      path(d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" fill="currentColor")
+  label.header-mobile-overlay(for="menu-checkbox")
