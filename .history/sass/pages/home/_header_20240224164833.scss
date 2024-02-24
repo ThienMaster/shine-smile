@@ -1,0 +1,183 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-color: abst.$bg-primary;
+  padding-block: 30px 110px;
+
+  &-container {
+    container-type: inline-size;
+    container-name: header-container;
+  }
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+    container-type: inline-size;
+    container-name: header-top;
+  }
+
+  &-menu {
+    // margin-inline: auto 222px;
+    @include abst.flexBox(((align-items: center, gap: 42px)));
+
+    &-item {
+      position: relative;
+
+      &:first-child::before {
+        content: "";
+        @include abst.size(6px);
+        border-radius: 100rem;
+        background-color: #fff;
+        position: absolute;
+        left: -12px;
+        bottom: 10px;
+      }
+
+      &:first-child .header-menu-link {
+        text-shadow: 1px 0 0 currentColor;
+        color: #fff;
+      }
+    }
+
+    &-link {
+      color: abst.$gray-c9;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      @include abst.fontWeight("light");
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+        color: #fff;
+      }
+    }
+  }
+
+  @container header-top (max-width: 970px) {
+    &-menu {
+      display: none;
+    }
+
+    &-logo {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-btn {
+    @include abst.flexBox(((align-items: center, gap: 28px)));
+
+    @container header-top (max-width: 550px) {
+      & {
+        display: none;
+      }
+    }
+
+    .button {
+      display: inline-block;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      padding: 8px 20px;
+      border-radius: 22px;
+      transition: all 0.2s linear;
+    }
+
+    .button-login {
+      color: abst.$gray-c9;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      @include abst.fontWeight("light");
+      transition: all 0.2s linear;
+
+      &:hover {
+        text-shadow: 1px 0 0 currentColor;
+        color: #fff;
+      }
+    }
+
+    .button-signup:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.hero {
+  margin-top: 76px;
+  @include abst.flexBox(
+    ((align-items: center, justify-content: space-between))
+  );
+  container-type: inline-size;
+  container-name: hero;
+
+  @container header-container (max-width: 970px) {
+    & {
+      flex-direction: column-reverse;
+      gap: 50px;
+    }
+  }
+
+  &-content {
+    width: 44%;
+    container-type: inline-size;
+    container-name: hero-content;
+
+    @container hero (max-width: 970px) {
+      & {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+
+  &-heading {
+    font-size: 70px;
+    line-height: calc(80 / 70);
+    letter-spacing: -1.4px;
+  }
+
+  &-caption {
+    margin-block: 22px 38px;
+    color: abst.$gray-c9;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+  }
+
+  &-links {
+    @include abst.flexBox(((align-items: center, gap: 38px)));
+
+    @media (max-width: 1005px) {
+      & {
+        justify-content: center;
+      }
+    }
+
+    @container hero-content (max-width: 400px) {
+      & {
+        flex-direction: column;
+        gap: 25px;
+      }
+    }
+  }
+
+  &-button {
+    display: inline-block;
+    padding: 15px 46px;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    border-radius: 30px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  span {
+    color: #fff;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+  }
+}

@@ -1,0 +1,72 @@
+@use "../../abstracts" as abst;
+
+.appointment {
+  container-type: inline-size;
+  container-name: appointment;
+  &-container {
+    margin: 170px 0;
+    container-type: inline-size;
+    container-name: appointment-container;
+
+    @container appointment (max-width: 540px) {
+      margin-top: 90px;
+    }
+  }
+
+  &-content {
+    background-color: #f6fbff;
+    padding: 100px 0;
+  }
+
+  &-heading {
+    color: abst.$bg-primary;
+    font-size: 50px;
+    line-height: calc(60 / 50);
+    letter-spacing: -1px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 18px;
+
+    &:after {
+      content: "";
+      @include abst.size(136px, 2px);
+      background-color: abst.$blue-2e;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @container appointment-container (max-width: 540px) {
+    &-content {
+      padding: 35px;
+    }
+
+    &-heading {
+      font-size: 30px;
+    }
+  }
+
+  &-caption {
+    max-width: 617px;
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    margin: 18px auto 38px;
+    text-align: center;
+  }
+
+  &-button {
+    display: block;
+    padding: 15px 40px;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    border-radius: 30px;
+    transition: all 0.2s linear;
+    margin: 0 auto;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

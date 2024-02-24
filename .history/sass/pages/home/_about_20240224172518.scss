@@ -1,0 +1,91 @@
+@use "../../abstracts" as abst;
+
+.about {
+  margin-top: 85px;
+  padding: 85px 0 200px;
+
+  &-container {
+    container-type: inline-size;
+    container-name: about-container;
+  }
+
+  &-wrapper {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-image {
+    width: 49%;
+    position: relative;
+
+    &-big {
+      @include abst.size(512px, 370px);
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    &-small {
+      @include abst.size(332px, 370px);
+      object-fit: cover;
+      position: absolute;
+      top: 121px;
+      left: 238px;
+    }
+  }
+
+  &-content {
+    width: 40%;
+    margin-top: 83px;
+  }
+
+  &-heading {
+    color: abst.$bg-primary;
+    font-size: 50px;
+    line-height: calc(60 / 50);
+    letter-spacing: -1px;
+  }
+
+  &-caption {
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    margin-block: 18px 38px;
+  }
+
+  &-button {
+    display: inline-block;
+    padding: 15px 51px;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+    border-radius: 30px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @container about-container (max-width: 980px) {
+    &-wrapper {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &-image {
+      width: 100%;
+
+      &-big {
+        width: 100%;
+      }
+
+      &-small {
+        display: none;
+      }
+    }
+
+    &-content {
+      width: 90%;
+      text-align: center;
+    }
+  }
+}
